@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { buyGuitar } from './redux/actions/guitars'
+
+const App = () => {
+    const guitars = useSelector(state => state.guitarReducer.guitars)
+
+    const dispatch = useDispatch()
+
+    const handleOnClick = (type) => {
+        if (type === 'acoustic') {
+            dispatch(buyGuitar({acousticGuitar: "Lakewood"}))
+        } else if (type === 'electric') {
+            dispatch(buyGuitar({electricGuitar: "Jackson"}))
+        } else {
+            dispatch(buyGuitar({Guitar: null}))
+        }
+
+        console.log("Guitars: ", guitars)
+    }
+
+    return (
+        <fieldset>
+            <span>List of Acoustic Guitars: {guitars.acousticGuitar.length}</span> <br />
+             <span>List of Electric Guitars: {guitars.electricGuitar.length}</span> <br /><br />
+            <button onClick={() => handleOnClick('acoustic')}>Acoustic</button>
+            <button onClick={() => handleOnClick('electric')}>Electric</button>
+        </fieldset>
+    )
 }
 
-export default App;
+export default App
