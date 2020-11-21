@@ -1,32 +1,23 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { Switch } from 'react-router-dom'
+/* Style */ 
+import './assets/styles/App.css'
 
-import { buyGuitar } from './redux/actions/guitars'
+/* Component */ 
+import Products from './components/products/Products'
+import Navbar from './components/navbar/Navbar'
+import Cart from './components/cart/Cart'
+
 
 const App = () => {
-    const guitars = useSelector(state => state.guitarReducer.guitars)
-
-    const dispatch = useDispatch()
-
-    const handleOnClick = (type) => {
-        if (type === 'acoustic') {
-            dispatch(buyGuitar({acousticGuitar: "Lakewood"}))
-        } else if (type === 'electric') {
-            dispatch(buyGuitar({electricGuitar: "Jackson"}))
-        } else {
-            dispatch(buyGuitar({Guitar: null}))
-        }
-
-        console.log("Guitars: ", guitars)
-    }
-
     return (
-        <fieldset>
-            <span>List of Acoustic Guitars: {guitars.acousticGuitar.length}</span> <br />
-             <span>List of Electric Guitars: {guitars.electricGuitar.length}</span> <br /><br />
-            <button onClick={() => handleOnClick('acoustic')}>Acoustic</button>
-            <button onClick={() => handleOnClick('electric')}>Electric</button>
-        </fieldset>
+        <Switch>
+            <div className="App">
+                <Navbar/>
+                <Products />
+                <Cart/>
+            </div>
+        </Switch>
     )
 }
 
