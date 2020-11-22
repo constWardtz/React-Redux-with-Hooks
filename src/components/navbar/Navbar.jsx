@@ -19,7 +19,7 @@ const Navbar = ({ cart }) => {
         <div className="Navbar">
             <div className="logo-container">
                 <Link to="/">
-                    <p>Shopping Cart!</p>
+                    <p>Redux Shopping Cart!</p>
                 </Link>
             </div>
             <div className="cart-container">
