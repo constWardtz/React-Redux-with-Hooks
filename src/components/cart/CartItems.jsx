@@ -9,13 +9,14 @@ import Checkout from './checkout/Checkout'
 /* Style */ 
 import '../../assets/styles/CartItems.css'
 
-
 const CartItems = ({cart}) => {
     return (
         <div className="CartItems">
-            <Route path="/cart">
-                <Checkout />
-            </Route>
+            {
+                <Route path="/cart">
+                    <Checkout />
+                </Route>
+            }
             {cart.map(item => (
                 <Cart key={item.id} itemData={item}/>
             ))}
