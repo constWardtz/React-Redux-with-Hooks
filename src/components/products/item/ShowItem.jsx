@@ -7,7 +7,6 @@ import '../../../assets/styles/ShowItem.css'
 
 
 const ShowItem = ({showItem, addToCart}) => {
-    console.log("Item: ", showItem)
     return (
         <div className="ShowItem">
             <div className="wrapper">
