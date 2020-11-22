@@ -33,7 +33,7 @@ const Cart = ({ itemData, removeItem, updateQty }) => {
                                     <p>${ itemData.price }</p>
                                 </div>
                                 <div className="qty">
-                                    <span>Qty:</span> &nbsp;&nbsp;<input type="number" value={ qty } onChange={ handleOnChange}/>
+                                    <span>Qty:</span> &nbsp;&nbsp;<input type="number" name="qty" id="qty" value={ qty } onChange={ handleOnChange}/>
                                 </div>
                           </div>
                         </div>

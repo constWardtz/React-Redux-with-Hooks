@@ -18,7 +18,7 @@ const ShowItem = ({showItem, addToCart}) => {
                         <p>{showItem.title}</p>
                     </div>
                     <div className="price">
-                        <p>{showItem.price}</p>
+                        <p>${showItem.price}</p>
                     </div>
                     <div className="description">
                         <p>{showItem.description}</p>
