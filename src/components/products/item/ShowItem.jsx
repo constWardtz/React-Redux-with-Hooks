@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { addToCart } from '../../../redux/shopping/shoppingActions'
-
+import { Link } from 'react-router-dom'
 /* Style */ 
 import '../../../assets/styles/ShowItem.css'
 
@@ -26,7 +26,9 @@ const ShowItem = ({showItem, addToCart}) => {
                     </div>
                     <div className="btn">
                         <button onClick={() => addToCart(showItem.id)}>ADD TO CART</button>
-                        <button className="active">CLOSE</button>
+                        <Link to="/">
+                            <button className="active">CLOSE</button>
+                        </Link>
                     </div>
                 </div>
             </div>
