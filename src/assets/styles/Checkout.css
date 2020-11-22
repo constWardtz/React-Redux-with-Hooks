@@ -1,0 +1,29 @@
+.Checkout {
+    position: relative;
+    top: 120px;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.Checkout .wrapper {
+    background: var(--secondary);
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    text-align: center;
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+}
+
+.Checkout .wrapper .txt p {
+    margin: 12px;
+}
+
+.Checkout .wrapper .txt p:nth-child(1) {
+    font-size: 2rem;
+}
+
+.Checkout .wrapper .btn button {
+    margin-top: 15px;
+    width: 100%
+}

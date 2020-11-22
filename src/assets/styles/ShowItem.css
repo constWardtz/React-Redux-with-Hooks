@@ -1,16 +1,16 @@
 @import './App.css';
-.Product {
+.ShowItem {
     display: flex;
     justify-content: center;
 }
 
-.Product {
+.ShowItem {
     position: relative;
     top: 7rem;
     margin: 0 1rem 0 1rem;
 }
 
-.Product .wrapper {
+.ShowItem .wrapper {
     width: 100%;
     height: 60%;
     background: var(--secondary);
@@ -24,29 +24,29 @@
     flex-wrap: wrap;
 }
 
-.Product .wrapper .txt-container {
+.ShowItem .wrapper .txt-container {
     display: grid;
     padding: 10px;
     margin: 10px;
 }
 
-.Product .wrapper .txt-container .title p {
+.ShowItem .wrapper .txt-container .title p {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.Product .wrapper .txt-container .description p {
+.ShowItem .wrapper .txt-container .description p {
     font-size: 1rem;
 }
 
-.Product .wrapper .txt-container .title,
+.ShowItem .wrapper .txt-container .title,
 .price,
 .description {
     padding: 5px;
     font-size: 1.5rem;
 }
 
-.Product .wrapper .txt-container .btn button {
+.ShowItem .wrapper .txt-container .btn button {
     color: var(--primary);
     padding: 10px;
     border: none;
@@ -57,24 +57,24 @@
     background: var(--light);
 }
 
-.Product .wrapper .txt-container .btn .active {
+.ShowItem .wrapper .txt-container .btn .active {
     background: var(--primary);
     color: var(--light);
 }
 
-.Product .wrapper .txt-container .btn .active:hover {
+.ShowItem .wrapper .txt-container .btn .active:hover {
     background: var(--light);
     color: var(--primary);
 }
 
-.Product .wrapper .txt-container .btn button:hover {
+.ShowItem .wrapper .txt-container .btn button:hover {
     cursor: pointer;
     background: var(--primary);
     transform: 1s;
     color: var(--light);
 }
 
-.Product .wrapper .img img {
-    width: auto;
+.ShowItem .wrapper .img img {
+    width: 100%;
     padding: 10px
 }

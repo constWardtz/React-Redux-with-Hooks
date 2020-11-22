@@ -6,8 +6,7 @@ import './assets/styles/App.css'
 /* Component */ 
 import Products from './components/products/Products'
 import Navbar from './components/navbar/Navbar'
-import Cart from './components/cart/Cart'
-
+import CartItems from './components/cart/CartItems'
 
 const App = () => {
     return (
@@ -15,7 +14,7 @@ const App = () => {
             <div className="App">
                 <Navbar/>
                 <Products />
-                <Cart/>
+                <CartItems/>
             </div>
         </Switch>
     )

@@ -25,7 +25,7 @@ const shoppingReducer = (state = INITIAL_STATE, action) => {
         case shoppingTypes.EDIT_ITEM:
             return {
                 ...state,
-                cart: state.cart.map(item => item.id === action.payload.id ? {...item, qty: action.payload.qty } : item)
+                cart: state.cart.map(item => item.id === action.payload.id ? {...item, qty: +action.payload.qty } : item)
             }
         case shoppingTypes.REMOVE_ITEM:
             return {

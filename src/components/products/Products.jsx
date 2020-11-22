@@ -1,20 +1,27 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Product from './product/Product'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
-const Products = ({ products }) => {
+/* Component */ 
+import ShowItem from './item/ShowItem'
+import Product from './product/Product'
+
+const Products = ({ products, currentItem }) => {
     return (
         <div className="Products">
             {
                 products.map(product => (
                     <Route exact path="/">
                         <Product
-                            key = {product.id}
-                            productData = {product}
+                            productData={product}
                         />
                     </Route>
                 ))
+            }
+            {
+                (!currentItem) ?
+                    <Redirect to="/" /> :
+                    <Route path="/product/:id"><ShowItem /></Route> 
             }
         </div>
     )
@@ -22,7 +29,8 @@ const Products = ({ products }) => {
 
 const mapStateToProps = state => {
     return {
-        products: state.shop.products
+        products: state.shop.products,
+        currentItem: state.shop.currentItem
     }
 }
 

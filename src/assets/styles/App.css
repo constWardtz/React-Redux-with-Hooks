@@ -16,6 +16,23 @@ body {
     background: var(--primary);
 }
 
+button {
+    padding: 10px;
+    border: none;
+    background: var(--light);
+    color: var(--primary);
+    font-weight: bold;
+    width: 5rem;
+    outline: navajowhite;
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--primary);
+    transform: 1s;
+    color: var(--light);
+}
+
 a {
     text-decoration: none;
 }

@@ -16,7 +16,7 @@ export const showItem = itemID => {
     }
 }
 
-export const editItem = (itemID, value) => {
+export const updateQty = (itemID, value) => {
     return {
         type: shoppingTypes.EDIT_ITEM,
         payload: {

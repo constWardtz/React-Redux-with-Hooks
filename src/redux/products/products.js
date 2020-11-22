@@ -26,11 +26,11 @@ export const PRODUCTS = [{
         price: 70,
         image: "https://via.placeholder.com/150/d32776"
     },
-    /*{
+    {
         id: 5,
-        title: "Product One",
+        title: "Product Two",
         description: "natus nisi omnis corporis facere molestiae rerum in",
         price: 80,
         image: "https://via.placeholder.com/150/f66b97"
-    } */
+    }
 ]

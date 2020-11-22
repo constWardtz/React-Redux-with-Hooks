@@ -18,7 +18,9 @@ const Navbar = ({ cart }) => {
     return (
         <div className="Navbar">
             <div className="logo-container">
-                <a href="#">Shopping Cart!</a>
+                <Link to="/">
+                    <p>Shopping Cart!</p>
+                </Link>
             </div>
             <div className="cart-container">
                 <Link to="/cart">
